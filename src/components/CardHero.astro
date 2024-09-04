@@ -1,0 +1,32 @@
+---
+const { header } = Astro.props;
+const { paragraph } = Astro.props;
+---
+
+<div>
+  <div class="card">
+    <h3>{header}</h3>
+    <p>
+      {paragraph}
+    </p>
+    <button class="card-btn">Our Services</button>
+  </div>
+</div>
+<style>
+  .card {
+    display: flex;
+    padding: 46px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    background-color: rgba(38, 38, 38, 0.9);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+  }
+
+  h3,
+  p {
+    color: var(--color-secondary-1);
+  }
+</style>

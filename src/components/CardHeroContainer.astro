@@ -1,0 +1,32 @@
+---
+import CardHero from "./CardHero.astro";
+---
+
+<div class="grid-container">
+  <div class="card-container">
+    <CardHero
+      header="Finance & Restructuring"
+      paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
+    />
+    <CardHero
+      header="Our Approach"
+      paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
+    />
+    <CardHero
+      header="Consultalk Result"
+      paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
+    />
+  </div>
+</div>
+<style>
+  .grid-container {
+    grid-column: content-start/ content-end;
+  }
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+  }
+</style>
