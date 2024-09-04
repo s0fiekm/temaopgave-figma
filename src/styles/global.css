@@ -12,3 +12,14 @@
     --color-tertiary:#FBC336;
     --color-paragraph: #595566;
 }
+
+h1 {
+    font-family: var(--font-family-primary);
+ font-size: var(--font-size-xlarge);
+}
+
+p, a {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-base);
+    text-wrap: pretty;
+}
