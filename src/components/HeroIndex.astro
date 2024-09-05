@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="full">
   <div class="hero-content">
     <div class="hero-text">
       <h1>Adam Buschemia<br />Business Consultant</h1>
@@ -14,12 +14,13 @@
 </div>
 
 <style>
-  .hero {
-    background-color: var(--color-primary-3);
+  .full {
     grid-column: full;
+    background-color: var(--color-primary-3);
   }
 
   .hero-content {
+    padding-inline-start: max(1rem, 50% - var(--content) / 2);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

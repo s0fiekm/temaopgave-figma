@@ -1,4 +1,8 @@
-<header>
+---
+import Button from "./Button.astro";
+---
+
+<div class="full">
   <div class="header-content">
     <h1>AskExperts</h1>
     <nav class="menu-bar">
@@ -7,9 +11,9 @@
       <a href="#">Team</a>
       <a href="#">About</a>
     </nav>
-    <button class="login-btn">Login</button>
+    <Button text="Login" />
   </div>
-</header>
+</div>
 
 <style>
   h1 {
@@ -17,20 +21,17 @@
     font-weight: 600;
   }
 
-  header {
-    display: grid;
+  .full {
     background-color: rgba(27, 27, 27, 0.91);
-    grid-column: full-start / full-end;
+    grid-column: full;
   }
 
   .header-content {
-    grid-column: content-start / content-end;
+    padding-inline: max(1rem, 50% - var(--content) / 2);
     color: white;
     padding: 38px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-items: center;
+    justify-content: space-evenly;
   }
   a {
     color: white;
@@ -39,9 +40,6 @@
   .menu-bar {
     display: flex;
     gap: 2rem;
-  }
-
-  button {
-    justify-self: end;
+    align-items: center;
   }
 </style>

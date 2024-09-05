@@ -1,16 +1,25 @@
 
-* {
-    margin: 0;
-   box-sizing: border-box;
-}
-
-body {
-    display: grid;
-    grid-template-columns:
-      [full-start] 1fr [content-start] minmax(0, 1200px) [content-end] 1fr [full-end];
-    gap: 0; 
-    margin: 0;
+@layer reset {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
   }
+
+
+    .main-layout {
+        --gap: clamp(1rem, 6vw, 3rem); 
+        --full: minmax(var(--gap), 1fr); 
+        --content: min(calc(1200px - var(--gap) * 2)); 
+      
+        display: grid;
+        grid-template-columns:
+          [full-start] var(--full) 
+          [content-start] var(--content) [content-end] 
+          var(--full) [full-end]; 
+      }
+
 
 :root {
     --font-family-primary: "cabin", sans-serif;
