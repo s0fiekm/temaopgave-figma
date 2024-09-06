@@ -1,0 +1,48 @@
+---
+import TextTag from "./TextTag.astro";
+import LagkageDiagram from "./LagkageDiagram.astro";
+const makeBackgroundWhite = true;
+---
+
+<section class="container">
+  <div class="flex-container">
+    <div class="text">
+      <TextTag text="Experience" makeWhite={makeBackgroundWhite} />
+      <h2>More than 25 years of experience</h2>
+      <p>3000+ our clients are insured around the World</p>
+    </div>
+    <div class="lagkager">
+      <LagkageDiagram procent="85%" text="Consistency" />
+      <LagkageDiagram procent="95%" text="Improvement" />
+      <LagkageDiagram procent="90%" text="Branching" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    margin-top: 0;
+    grid-column: full;
+    background-color: var(--color-primary-1);
+    display: grid;
+    height: 33.02644rem;
+  }
+
+  .flex-container {
+    gap: 5.5625rem;
+    align-items: flex-start;
+    display: flex;
+    grid-column: content;
+    align-items: center;
+  }
+
+  .text {
+    width: 23.4375rem;
+  }
+
+  .lagkager {
+    display: flex;
+    flex-direction: row;
+    gap: 1.625rem;
+  }
+</style>

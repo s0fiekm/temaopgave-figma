@@ -1,8 +1,10 @@
 ---
-const { text } = Astro.props;
+const { text, makeWhite } = Astro.props;
+
+const isWhiteBackground = makeWhite || false;
 ---
 
-<div class="text-tag">
+<div class={`text-tag ${isWhiteBackground ? "white-bg" : "yellow-bg"}`}>
   <p>{text}</p>
 </div>
 
@@ -13,6 +15,14 @@ const { text } = Astro.props;
     padding: 0rem 0.75rem;
     align-items: flex-start;
     gap: 0.625rem;
+    background-color: var(--color-secondary-2, var(--color-primary-1));
+  }
+
+  .text-tag.white-bg {
+    background-color: #fff;
+  }
+
+  .text-tag.yellow-bg {
     background-color: var(--color-primary-1);
   }
 
