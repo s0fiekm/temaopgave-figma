@@ -1,0 +1,114 @@
+---
+import TextTag from "./TextTag.astro";
+import ContactUsList from "./ContactUsList.astro";
+
+const lists = [
+  {
+    title: "Call Today",
+    info: "+1 800 100 900",
+    icon: "./icons/phone.svg",
+  },
+  {
+    title: "Monday To Friday",
+    info: "9AM - 5PM",
+    icon: "./icons/hours.svg",
+  },
+  {
+    title: "USA Office",
+    info: "195 Devonshire St Boston, MA 02110",
+    icon: "./icons/place.svg",
+  },
+];
+---
+
+<section class="grid-container">
+  <div class="flex-container">
+    <div class="content-container">
+      <TextTag text="Process" />
+      <h2>Contact Us. It's Easy.</h2>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity beta test. Override the digital divide with additional from
+        DevOps.
+      </p>
+      <ContactUsList lists={lists} />
+    </div>
+    <div class="image-grid">
+      <div class="collage large">
+        <img src="./img/collage-1.avif" alt="Large Image" />
+      </div>
+      <div class="collage top">
+        <img src="./img/collage-2.avif" alt="Small Image 1" />
+      </div>
+      <div class="collage bottom">
+        <img src="./img/collage-3.avif" alt="Small Image 2" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-column: full;
+  }
+
+  .flex-container {
+    display: flex;
+    grid-column: content;
+    max-width: var(--content-width);
+    gap: 8rem;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .image-grid::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -50px;
+    width: 19.29238rem;
+    height: 19.2925rem;
+    background-repeat: no-repeat;
+    background-image: url("./icons/pattern.svg");
+    z-index: -1;
+  }
+
+  img {
+    overflow: hidden;
+    border-radius: 1.75rem;
+  }
+
+  .large {
+    grid-row: 1 / span 2;
+    position: relative;
+  }
+
+  .large::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -60px;
+    width: 19.1875rem;
+    height: 10.25rem;
+    background-color: var(--color-primary-2);
+    z-index: -1;
+    border-radius: 1.75rem;
+  }
+</style>
