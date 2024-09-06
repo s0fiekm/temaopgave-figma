@@ -22,16 +22,20 @@ import Button from "./Button.astro";
   }
 
   .full {
+    display: flex;
     background-color: rgba(27, 27, 27, 0.91);
     grid-column: full;
+    justify-content: center;
+    padding: 38px;
   }
 
   .header-content {
-    padding-inline: max(1rem, 50% - var(--content) / 2);
+    max-width: var(--content-width);
     color: white;
-    padding: 38px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
   }
   a {
     color: white;
