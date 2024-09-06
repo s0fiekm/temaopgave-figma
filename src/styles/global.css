@@ -4,12 +4,15 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+
     }
 
     .main-layout {
+      overflow-x: hidden;
+      overflow-y: auto;
       --gap: clamp(1rem, 6vw, 3rem); 
       --full: minmax(var(--gap), 1fr); 
-      --content: min(calc(1200px - var(--gap) * 2)); 
+      --content: minmax(600px, 1200px);  
     
       display: grid;
       grid-template-columns:
@@ -80,11 +83,6 @@ p {
   font-size: var(--paragraph);
   color: var(--color-secondary-3);
 }
-
-a {
-  font-family: var(--font-family-secondary);
-  font-size: var(--paragraph);
-}
     
   }
 
@@ -92,7 +90,10 @@ a {
 
 @layer components {
 
-
+button {
+  font-family: var(--font-family-secondary);
+  font-size: var(--paragraph);
+}
 
 
 }

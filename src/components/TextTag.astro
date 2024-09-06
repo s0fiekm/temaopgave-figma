@@ -1,0 +1,23 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="text-tag">
+  <p>{text}</p>
+</div>
+
+<style>
+  .text-tag {
+    display: inline-block;
+    border-radius: 1.25rem;
+    padding: 0rem 0.75rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    background-color: var(--color-primary-1);
+  }
+
+  p {
+    text-transform: uppercase;
+    color: var(--color-primary-3);
+  }
+</style>

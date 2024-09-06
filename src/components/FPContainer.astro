@@ -1,0 +1,61 @@
+---
+import CardFP from "../components/CardFP.astro";
+import TextTag from "../components/TextTag.astro";
+const cards = [
+  {
+    title: "The Balance Sheet",
+    description:
+      "The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time.",
+  },
+  {
+    title: "Income Statement",
+    description:
+      "The Income (Profit and Loss) Statement summarizes the revenue and expenses for a specific time period.",
+  },
+  {
+    title: "Financial Plan",
+    description:
+      "Keep your information current and review the documents on a regular basis.",
+  },
+  {
+    title: "Financial Ratios",
+    description:
+      "Ratios are useful when comparing your company with the competition on financial performance.",
+  },
+];
+---
+
+<div class="section-container">
+  <div class="card-container">
+    <div class="text-container">
+      <TextTag text="Growing with our Clients" />
+      <h2>Our core values & principles</h2>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity beta test. Override the digital divide with additional from
+        DevOps.
+      </p>
+      <div>
+        <button> Get in touch </button>
+      </div>
+    </div>
+    <CardFP cards={cards} />
+  </div>
+</div>
+
+<style>
+  .section-container {
+    display: grid;
+    width: 120rem;
+    height: 55.8125rem;
+    grid-column: full;
+    background-color: var(--color-secondary-1);
+  }
+
+  .card-container {
+    grid-column: content;
+    gap: 4.375rem;
+    display: grid;
+    align-content: center;
+  }
+</style>
