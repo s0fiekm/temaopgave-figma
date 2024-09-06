@@ -1,0 +1,108 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="newsletter-container">
+  <div class="background-elements">
+    <div class="pattern"></div>
+    <div class="green-shape"></div>
+  </div>
+  <div class="newsletter-content">
+    <div class="text-section">
+      <h2>Subscribe Our Newsletter</h2>
+      <p>
+        Build stronger Customer Relationships with <span>Consultalk</span>
+      </p>
+    </div>
+    <div class="input-section">
+      <input type="email" placeholder="your mail address" class="email-input" />
+      <Button text="subscribe" />
+    </div>
+  </div>
+</section>
+<style>
+  .newsletter-container {
+    height: 15.75rem;
+    background-color: var(--color-primary-3);
+    display: grid;
+    grid-column: content;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .newsletter-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    max-width: var(--content-width);
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .text-section {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h2 {
+      font-size: var(--heading-small);
+    }
+
+    p {
+      color: #fff;
+    }
+  }
+
+  .text-section span {
+    font-weight: bold;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .email-input {
+    padding: 1rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    width: 300px;
+    font-size: var(--paragraph);
+  }
+
+  .background-elements {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .pattern {
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 22.59619rem;
+    height: 22.59631rem;
+    transform: rotate(43.687deg);
+    background-image: url(./icons/pattern.svg);
+    opacity: 0.4;
+  }
+
+  .green-shape {
+    bottom: -200px;
+    right: -70px;
+    position: absolute;
+    width: 14.16294rem;
+    height: 17.80919rem;
+    transform: rotate(135deg);
+    background-color: #4eaf4e;
+    border-radius: 30px;
+  }
+</style>
