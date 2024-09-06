@@ -3,19 +3,19 @@ const { header } = Astro.props;
 const { paragraph } = Astro.props;
 ---
 
-<div>
-  <div class="card">
-    <h3>{header}</h3>
-    <p>
-      {paragraph}
-    </p>
-    <button class="card-btn">Our Services</button>
-  </div>
+<div class="flex-container">
+  <h3>{header}</h3>
+  <p>
+    {paragraph}
+  </p>
+  <button class="card-btn">Our Services</button>
 </div>
+
 <style>
-  .card {
+  .flex-container {
+    z-index: 2;
     display: flex;
-    padding: 46px;
+    padding: 2.875rem;
     flex-direction: column;
     justify-content: center;
     align-items: start;

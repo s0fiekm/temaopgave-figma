@@ -7,10 +7,17 @@
 
     }
 
+    :root{
+      --content-width: 1200px; 
+      --gap: clamp(1rem, (100% - var(--content-width)) / 6, 2rem);
+      --content-start-padding: calc((100% - var(--content-width)) / 2); 
+}
+    }
+
     .main-layout {
       overflow-x: hidden;
       overflow-y: auto;
-      --gap: clamp(1rem, 6vw, 3rem); 
+      --gap: clamp(1rem, 6vw, 4rem); 
       --full: minmax(var(--gap), 1fr); 
       --content: minmax(600px, 1200px);  
     
@@ -25,7 +32,7 @@
     .main-layout > :nth-child(n+3){
       margin-block-start: 5rem; 
     }
-  }
+  
 
   @layer base {
     :root {

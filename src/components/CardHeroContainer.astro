@@ -20,16 +20,14 @@ import CardHero from "./CardHero.astro";
 </div>
 <style>
   .grid-container {
-    margin-top: -4rem;
-    z-index: 1;
-    position: relative;
-    grid-column: content-start/ content-end;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: row;
+    grid-column: content;
   }
   .card-container {
+    z-index: 2;
+    gap: 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    align-self: stretch;
   }
 </style>

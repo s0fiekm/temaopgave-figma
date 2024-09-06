@@ -1,32 +1,36 @@
 ---
-import CardFP from "../components/CardFP.astro";
+import TestCard from "../components/TestCard.astro";
 import TextTag from "../components/TextTag.astro";
 const cards = [
   {
     title: "The Balance Sheet",
     description:
       "The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time.",
+    icon: "./icons/balance.svg",
   },
   {
     title: "Income Statement",
     description:
       "The Income (Profit and Loss) Statement summarizes the revenue and expenses for a specific time period.",
+    icon: "./icons/income.svg",
   },
   {
     title: "Financial Plan",
     description:
       "Keep your information current and review the documents on a regular basis.",
+    icon: "./icons/financial.svg",
   },
   {
     title: "Financial Ratios",
     description:
       "Ratios are useful when comparing your company with the competition on financial performance.",
+    icon: "./icons/ratios.svg",
   },
 ];
 ---
 
-<div class="section-container">
-  <div class="card-container">
+<div class="grid-container">
+  <div class="content-container">
     <div class="text-container">
       <TextTag text="Growing with our Clients" />
       <h2>Our core values & principles</h2>
@@ -35,27 +39,27 @@ const cards = [
         activity beta test. Override the digital divide with additional from
         DevOps.
       </p>
-      <div>
-        <button> Get in touch </button>
-      </div>
     </div>
-    <CardFP cards={cards} />
+    <div class="buttons">
+      <button>&#8592;</button>
+      <button> &#8594;</button>
+    </div>
+    <TestCard cards={cards} />
   </div>
 </div>
-
 <style>
-  .section-container {
+  .grid-container {
+    align-items: center;
     display: grid;
-    width: 120rem;
-    height: 55.8125rem;
     grid-column: full;
+    height: 55.8125rem;
     background-color: var(--color-secondary-1);
   }
 
-  .card-container {
-    grid-column: content;
-    gap: 4.375rem;
-    display: grid;
-    align-content: center;
+  .content-container {
+    max-width: calc(var(--content-width) + var(--content-start-padding));
+    margin-left: var(--content-start-padding);
+    display: flex;
+    flex-direction: column;
   }
 </style>

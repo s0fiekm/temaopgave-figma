@@ -1,0 +1,69 @@
+---
+import TestCard from "./TestCard.astro";
+import TextTag from "./TextTag.astro";
+
+const cards = [
+  {
+    title: "Creative Ideas",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.",
+    link: "https://example.com",
+    icon: "./icons/creative.svg",
+  },
+
+  {
+    title: "Best Features",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com",
+    icon: "./icons/experience.svg",
+  },
+
+  {
+    title: "Experience",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.",
+    link: "https://example.com",
+    icon: "./icons/feature.svg",
+  },
+
+  {
+    title: "Easy Solutions",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "https://example.com",
+    icon: "./icons/solutions.svg",
+  },
+];
+---
+
+<section class="container">
+  <div class="content-container">
+    <div class="text-container">
+      <TextTag text="Growing with our clients" />
+      <h2>Our core values & principles</h2>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity beta test. Override the digital divide with additional from
+        DevOps.
+      </p>
+    </div>
+    <TestCard cards={cards} />
+  </div>
+</section>
+
+<style>
+  .container {
+    display: grid;
+    margin: 0;
+    height: 33.02644rem;
+    grid-column: full;
+    background-color: var(--color-primary-3);
+  }
+
+  .content-container {
+    grid-column: content-start / content-end;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--color-secondary-2);
+  }
+</style>
