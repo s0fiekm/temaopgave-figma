@@ -1,0 +1,54 @@
+---
+import TextTag from "./TextTag.astro";
+const { img, title } = Astro.props;
+---
+
+<article class="container">
+  <div class="img-container">
+    <TextTag text="CEO at Company" />
+    <img src={img} alt="" class="profile" />
+  </div>
+  <div class="text">
+    <h3>{title}</h3>
+    <p>
+      Leverage agile frameworks to provide a robust synopsis for high level
+      overviews"
+    </p>
+    <div class="icons">
+      <a href=""><img src="icons/Instagram.svg" alt="" /></a>
+      <a href=""><img src="icons/Facebook.svg" alt="" /></a>
+      <a href=""><img src="icons/Twitter.svg" alt="" /></a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .container {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 22.875rem;
+  }
+
+  .img-container {
+  }
+  img {
+    border-radius: 1.25rem;
+  }
+  a img {
+    width: 2rem;
+    height: 1.5rem;
+  }
+
+  .icons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .text {
+    text-align: center;
+  }
+</style>
