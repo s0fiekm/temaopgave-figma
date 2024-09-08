@@ -1,0 +1,34 @@
+---
+import ImgCard from "./ImgCard.astro";
+---
+
+<div class="container">
+  <h2>Meet Our Great Team</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam,
+    quis nostrud exercitation.
+  </p>
+  <div class="img-container">
+    <ImgCard title="Sarah Jasmine" img="img/Sarah.avif" />
+    <ImgCard title="John Carter" img="img/john.avif" />
+    <ImgCard title="Daisy Stella" img="img/daisy.avif" />
+    <ImgCard title="Maya Elisabeth" img="img/maya.avif" />
+    <ImgCard title="Ryan Jackson" img="img/ryan.avif" />
+    <ImgCard title="Lilly Victoria" img="img/lilly.avif" />
+  </div>
+</div>
+
+<style>
+  .container {
+    grid-column: content;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+</style>

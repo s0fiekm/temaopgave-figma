@@ -1,0 +1,208 @@
+<section class="container">
+  <div class="accordion-container">
+    <h2>Costumer Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-button-1"
+          class="accordion-checkbox"
+        />
+        <label for="accordion-button-1" class="accordion-label">
+          <span class="accordion-title"
+            >What will happen when I’ve sent my application?</span
+          >
+          <span class="icon" aria-hidden="true">+</span>
+        </label>
+        <div class="accordion-content">
+          <p>
+            Ippsum is the result of synergy between our teams and our customers.
+            Our company culture is focused on excellent productivity, customer
+            satisfaction, respect for team and individual achievements.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-button-2"
+          class="accordion-checkbox"
+        />
+        <label for="accordion-button-2" class="accordion-label">
+          <span class="accordion-title"
+            >Can I get a free trial before I purchase?</span
+          >
+          <span class="icon" aria-hidden="true">+</span>
+        </label>
+        <div class="accordion-content">
+          <p>
+            Ippsum is the result of synergy between our teams and our customers.
+            Our company culture is focused on excellent productivity, customer
+            satisfaction, respect for team and individual achievements.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-button-3"
+          class="accordion-checkbox"
+        />
+        <label for="accordion-button-3" class="accordion-label">
+          <span class="accordion-title"
+            >What should I include in my personal statement?</span
+          >
+          <span class="icon" aria-hidden="true">+</span>
+        </label>
+        <div class="accordion-content">
+          <p>
+            Ippsum is the result of synergy between our teams and our customers.
+            Our company culture is focused on excellent productivity, customer
+            satisfaction, respect for team and individual achievements.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-button-4"
+          class="accordion-checkbox"
+        />
+        <label for="accordion-button-4" class="accordion-label">
+          <span class="accordion-title"
+            >Will membership plans be charged automatically?</span
+          >
+          <span class="icon" aria-hidden="true">+</span>
+        </label>
+        <div class="accordion-content">
+          <p>
+            Ippsum is the result of synergy between our teams and our customers.
+            Our company culture is focused on excellent productivity, customer
+            satisfaction, respect for team and individual achievements.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-button-4"
+          class="accordion-checkbox"
+        />
+        <label for="accordion-button-4" class="accordion-label">
+          <span class="accordion-title"
+            >What will happen when I’ve sent my application?</span
+          >
+          <span class="icon" aria-hidden="true">+</span>
+        </label>
+        <div class="accordion-content">
+          <p>
+            Ippsum is the result of synergy between our teams and our customers.
+            Our company culture is focused on excellent productivity, customer
+            satisfaction, respect for team and individual achievements.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input
+          type="checkbox"
+          id="accordion-button-4"
+          class="accordion-checkbox"
+        />
+        <label for="accordion-button-4" class="accordion-label">
+          <span class="accordion-title"
+            >Can I get a free trial before I purchase?</span
+          >
+          <span class="icon" aria-hidden="true">+</span>
+        </label>
+        <div class="accordion-content">
+          <p>
+            Ippsum is the result of synergy between our teams and our customers.
+            Our company culture is focused on excellent productivity, customer
+            satisfaction, respect for team and individual achievements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .container {
+    grid-column: full;
+    background-color: var(--color-secondary-1);
+    padding: 9.4375rem 14.75rem;
+  }
+  .accordion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: content;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    max-width: 50rem;
+  }
+
+  .accordion-checkbox {
+    display: none;
+  }
+
+  .accordion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 1.3rem;
+  }
+
+  .icon {
+    transition: transform 0.3s;
+  }
+
+  .accordion-checkbox:checked + .accordion-label .icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.6s ease,
+      padding 0.6s ease,
+      opacity 0.6s ease;
+    padding: 0 15px;
+    opacity: 0;
+  }
+
+  .accordion-checkbox:checked + .accordion-label + .accordion-content {
+    max-height: 500px;
+    padding: 15px;
+    opacity: 1;
+  }
+
+  .accordion-content p {
+    margin: 0;
+  }
+
+  .accordion-item {
+    position: relative;
+  }
+
+  .accordion-item::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #dadada;
+  }
+  h2 {
+    padding-bottom: 40px;
+  }
+</style>
