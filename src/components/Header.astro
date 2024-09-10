@@ -2,23 +2,37 @@
 import Button from "./Button.astro";
 ---
 
-<div class="full">
-  <div class="header-content">
+<header class="full full-width">
+  <div class="header-content ">
     <h1>AskExperts</h1>
+    <!-- Hidden checkbox to control the menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <!-- Label that acts as the burger icon -->
+    <label for="menu-toggle" class="burger-menu" aria-label="Toggle menu">
+      ☰
+    </label>
     <nav class="menu-bar">
-      <a href="#">Home</a>
-      <a href="#">Case Study</a>
-      <a href="#">Team</a>
-      <a href="#">About</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/casestudy">Case Study</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
     </nav>
-    <Button text="Login" />
+    <Button text="Login"/>
   </div>
-</div>
+</header>
 
 <style>
   h1 {
     font-size: 30px;
     font-weight: 600;
+  }
+
+  .menu-collapsed {
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 
   .full {
@@ -29,22 +43,77 @@ import Button from "./Button.astro";
     padding: 38px;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
   .header-content {
     max-width: var(--content-width);
     color: white;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     width: 100%;
     align-items: center;
   }
-  a {
+  li a {
     color: white;
     text-decoration: none;
   }
 
-  .menu-bar {
+  ul {
+    list-style: none;
     display: flex;
+    flex-direction: row;
     gap: 2rem;
     align-items: center;
+  }
+
+  .burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 700px) {
+
+    .header {
+      margin:0;
+    }
+    .burger-menu {
+      display: block;
+    }
+
+ 
+    .menu-bar {
+      display: none;
+      position: absolute;
+      top: 110px;
+      right: 0;
+      background-color: black;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .menu-bar ul {
+      flex-direction: column;
+    }
+
+    .menu-bar li {
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .menu-toggle:checked + .burger-menu + .menu-bar {
+      display: block;
+    }
   }
 </style>

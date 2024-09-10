@@ -1,14 +1,20 @@
 ---
+import Button from "./Button.astro";
 import ImgCard from "./ImgCard.astro";
 ---
 
 <div class="container">
-  <h2>Meet Our Great Team</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam,
-    quis nostrud exercitation.
-  </p>
+  <div class="content-container">
+    <div class="text">
+      <h2>Meet Our Great Team</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. enim ad minim
+        veniam, quis nostrud exercitation.
+      </p>
+    </div>
+    <Button text="Join Our Team" />
+  </div>
   <div class="img-container">
     <ImgCard title="Sarah Jasmine" img="img/Sarah.avif" />
     <ImgCard title="John Carter" img="img/john.avif" />
@@ -21,14 +27,22 @@ import ImgCard from "./ImgCard.astro";
 
 <style>
   .container {
-    grid-column: content;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
   }
   .img-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 3.1rem;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 25.125rem;
   }
 </style>

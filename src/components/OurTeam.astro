@@ -5,7 +5,9 @@ import TextTag from "./TextTag.astro";
 
 <section class="container">
   <div class="text">
+    <div>
     <TextTag text="Our Team" />
+</div>
     <h2>We Champion the bold to achieve the extraordinary</h2>
     <p>
       Ippsum is the result of synergy between our teams and our customers. Our
@@ -29,7 +31,6 @@ import TextTag from "./TextTag.astro";
 
   .text {
     display: flex;
-    width: 40.1875rem;
     flex-direction: column;
   }
 
@@ -38,4 +39,13 @@ import TextTag from "./TextTag.astro";
     flex-direction: row;
     gap: 3rem;
   }
+
+@media (max-width:700px) {
+    .people {
+    display: grid;
+   grid-template-columns: 1fr;
+ justify-items:center;
+    gap: 3rem;
+  }
+}
 </style>

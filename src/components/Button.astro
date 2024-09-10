@@ -8,22 +8,24 @@ const { text } = Astro.props;
 
 <style>
   button {
-    padding: 0.8rem;
+    white-space: nowrap;
+    width: 10rem;
     background-color: var(--color-primary-1);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     border: 0;
     border-radius: 55px;
     align-items: center;
-    transition: all 0.15s;
     box-sizing: border-box;
 
     & a {
+      padding: 0.9375rem 1.875rem;
       color: var(--color-primary-3);
-      padding: 0.25rem 1rem;
       text-align: center;
       text-decoration: none;
+      display: inline-block;
     }
   }
 </style>

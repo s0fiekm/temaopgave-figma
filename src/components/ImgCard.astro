@@ -3,52 +3,61 @@ import TextTag from "./TextTag.astro";
 const { img, title } = Astro.props;
 ---
 
-<article class="container">
-  <div class="img-container">
-    <TextTag text="CEO at Company" />
-    <img src={img} alt="" class="profile" />
-  </div>
-  <div class="text">
-    <h3>{title}</h3>
-    <p>
-      Leverage agile frameworks to provide a robust synopsis for high level
-      overviews"
-    </p>
-    <div class="icons">
-      <a href=""><img src="icons/Instagram.svg" alt="" /></a>
-      <a href=""><img src="icons/Facebook.svg" alt="" /></a>
-      <a href=""><img src="icons/Twitter.svg" alt="" /></a>
+<div>
+  <a href="/teamsingle" class="card-link">
+    <div class="card">
+      <div class="card-image">
+        <img src={img} alt="" />
+      </div>
+      <div class="card-content">
+        <h3>{title}</h3>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high-level
+          overviews.
+        </p>
+        <div class="social-icons">
+          <a href="#"><img src="icons/Instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img src="icons/Facebook.svg" alt="Facebook" /></a>
+          <a href="#"><img src="icons/Twitter.svg" alt="Twitter" /></a>
+        </div>
+      </div>
     </div>
-  </div>
-</article>
+  </a>
+</div>
 
 <style>
-  .container {
-    gap: 1rem;
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card {
+    max-width: 20.875rem;
     display: flex;
     flex-direction: column;
-    width: 22.875rem;
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center; /* Center content vertically */
+    text-align: center;
   }
 
-  .img-container {
-  }
-  img {
+  .card-image img {
+    width: 100%;
+    height: auto;
     border-radius: 1.25rem;
   }
-  a img {
-    width: 2rem;
-    height: 1.5rem;
-  }
 
-  .icons {
-    margin-top: 1rem;
+  .card-content {
+    padding: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .text {
-    text-align: center;
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
   }
 </style>

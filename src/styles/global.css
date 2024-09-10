@@ -5,34 +5,46 @@
       padding: 0;
       box-sizing: border-box;
     }
+  }
 
-    :root{
-      --content-width: 1200px; 
-      --gap: clamp(1rem, (100% - var(--content-width)) / 6, 2rem);
-      --content-start-padding: calc((100% - var(--content-width)) / 2); 
-}
-    }
 
-    .main-layout {
-      overflow-x: hidden;
-      overflow-y: auto;
-      --gap: clamp(1rem, 6vw, 4rem); 
-      --full: minmax(var(--gap), 1fr); 
-      --content: minmax(600px, 1200px);  
+
+  body{
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content: min(calc(1200px - var(--gap) * 2));
+
+    display: grid;
+    grid-template-columns: 
+        [full-start] var(--full)
+        [content-start] var(--content) [content-end]
+        var(--full) [full-end];
     
-      display: grid;
-      grid-template-columns:
-        [full-start] var(--full) 
-        [content-start] var(--content) [content-end] 
-        var(--full) [full-end]; 
-
+      & * {
+        grid-column: content;
     }
+
+     & *.full {
+        grid-column: full;
+    }
+  
+  }
+
+
+@media (max-width: 600px) {
+
+
+
+
+  
+}
+
 
     .main-layout > :nth-child(n+3){
       margin-block-start: 5rem; 
     }
   
-
+  
   @layer base {
     :root {
       /* Farver */
@@ -50,7 +62,7 @@
       --heading-base: clamp(0.5rem, 1vw + .5rem, 1.56);
       --heading-xsmall: clamp(1.2rem, 1.5vw + .5rem, 1.87rem);
       --heading-small: clamp(1.2rem, 1.3vw + .8rem, 2.18rem);
-      --heading-large: clamp(1.4rem, 2vw + 1rem, 2.5rem);
+      --heading-large: clamp(1rem, 2vw + 1rem, 2.5rem);
       --heading-xlarge: clamp(1.8rem, 2vw + 1rem, 2.8rem);
       --heading-xxlarge: clamp(2rem, 3vw + 1rem, 3.12rem);
     }
@@ -84,7 +96,7 @@ h6 {
   font-size: var(--heading-base);
 }
 
-p {
+p, a {
   font-family: var(--font-family-secondary);
   font-size: var(--paragraph);
   color: var(--color-secondary-3);
@@ -103,7 +115,10 @@ button {
 
 
 }
-  
+
+
+
+
 
 
  

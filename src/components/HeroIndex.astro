@@ -1,36 +1,49 @@
-<div class="grid-container">
+<section class="grid-container full">
   <div class="hero-content">
     <div class="hero-text">
-      <h1>Adam Buschemia<br />Business Consultant</h1>
-      <p>
-        Get help from Alex Moore, a professional business coach with advanced
-        experience on growth and business scaling.
-      </p>
+      <div class="text">
+        <h1>Adam Buschemia<br />Business Consultant</h1>
+        <p>
+          Get help from Alex Moore, a professional business coach <br /> with advanced
+          experience on growth and business scaling.
+        </p>
+      </div>
     </div>
     <div class="hero-img">
       <img src="../img/Photo.avif" alt="" />
     </div>
   </div>
-</div>
+</section>
 
 <style>
   .grid-container {
+    margin: 0;
     grid-column: full;
-    background-color: var(--color-primary-3);
+
     position: relative;
     z-index: 0;
   }
 
   .hero-content {
+    align-items: stretch;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    max-width: calc(var(--content-width) + var(--content-start-padding));
     margin-left: var(--content-start-padding);
   }
 
+  .text {
+    margin-left: 5rem;
+  }
+
   .hero-text {
-    max-width: 500px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    background-color: var(--color-primary-3);
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     color: var(--color-secondary-2);
   }
 
@@ -40,7 +53,6 @@
   }
 
   .hero-text p {
-    margin: 0;
     color: var(--color-secondary-2);
   }
 
@@ -51,8 +63,21 @@
   }
 
   .hero-img img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
+  }
+
+  @media (max-width: 900px) {
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
   }
 </style>

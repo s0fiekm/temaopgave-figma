@@ -1,5 +1,4 @@
 ---
-import TestCard from "./TestCard.astro";
 import TextTag from "./TextTag.astro";
 
 const cards = [
@@ -46,15 +45,12 @@ const cards = [
         DevOps.
       </p>
     </div>
-    <TestCard cards={cards} />
   </div>
 </section>
 
 <style>
   .container {
     display: grid;
-    margin: 0;
-    height: 33.02644rem;
     grid-column: full;
     background-color: var(--color-primary-3);
   }
@@ -66,5 +62,16 @@ const cards = [
     color: var(--color-secondary-2);
     display: flex;
     flex-direction: column;
+  }
+
+  @media {
+    .container {
+      display: grid;
+      margin: 0;
+      height: auto;
+      padding: 2rem;
+      justify-items: center;
+      background-color: var(--color-primary-3);
+    }
   }
 </style>

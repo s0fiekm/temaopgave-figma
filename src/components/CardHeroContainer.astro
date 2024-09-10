@@ -2,7 +2,7 @@
 import CardHero from "./CardHero.astro";
 ---
 
-<div class="grid-container">
+
   <div class="card-container">
     <CardHero
       header="Finance & Restructuring"
@@ -17,17 +17,31 @@ import CardHero from "./CardHero.astro";
       paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
     />
   </div>
-</div>
+
 <style>
-  .grid-container {
-    margin-top: -100px;
-    display: flex;
-    flex-direction: row;
-    grid-column: content;
-  }
+
+  
   .card-container {
+    justify-content: center;
+    margin-top: -50px;
+    flex-direction: row;
     z-index: 2;
     gap: 2rem;
     display: flex;
+  }
+
+  @media (max-width: 900px) {
+    .card-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 0;
+
+    }
   }
 </style>

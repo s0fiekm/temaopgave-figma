@@ -3,13 +3,15 @@ const { title, image } = Astro.props;
 import TextTag from "./TextTag.astro";
 ---
 
-<section class="hero-banner">
+<section class="hero-banner full">
   <div class="img-container">
     <img src={image} alt="" />
   </div>
   <div class="flex-overlay">
     <div class="text-overlay">
-      <TextTag text="Services" />
+      <div>
+        <TextTag text="Services" />
+      </div>
       <h1 class="tag">{title}</h1>
     </div>
   </div>
@@ -18,15 +20,15 @@ import TextTag from "./TextTag.astro";
 <style>
   .hero-banner {
     display: grid;
-    grid-template-areas: "overlay"; /* Define a single grid area for both elements */
-    grid-column: full-start / full-end; /* Make the hero section span the full width */
+    grid-template-areas: "overlay";
+    grid-column: full-start / full-end;
     overflow: hidden;
-    position: relative; /* Establishes a positioning context for z-index */
+    position: relative;
   }
 
   .img-container {
-    grid-area: overlay; /* Place the image in the same grid area as the overlay */
-    z-index: 1; /* Set a lower z-index so it stays behind the overlay */
+    grid-area: overlay;
+    z-index: 1;
   }
 
   .img-container img {
@@ -37,18 +39,21 @@ import TextTag from "./TextTag.astro";
   }
 
   .flex-overlay {
+    grid-column: content-start / content-end;
+    grid-column: content;
     grid-area: overlay;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     z-index: 2;
+    padding-left: 15rem;
   }
 
   .text-overlay {
     display: flex;
     flex-direction: column;
-    max-width: 40rem;
+    border-radius: 1.8125rem;
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 3rem 3.75rem;
   }
 </style>

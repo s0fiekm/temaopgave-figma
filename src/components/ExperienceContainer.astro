@@ -4,11 +4,12 @@ import LagkageDiagram from "./LagkageDiagram.astro";
 const makeBackgroundWhite = true;
 ---
 
-<section class="container">
-  <div class="flex-container">
+<section class="full">
+
     <div class="text">
-      <TextTag text="Experience" makeWhite={makeBackgroundWhite} />
-      <h2>More than 25 years of experience</h2>
+        <div>
+      <TextTag text="Experience" makeWhite={makeBackgroundWhite} /></div>
+      <h2>More than 25 years <br>of experience</h2>
       <p>3000+ our clients are insured around the World</p>
     </div>
     <div class="lagkager">
@@ -16,33 +17,50 @@ const makeBackgroundWhite = true;
       <LagkageDiagram procent="95%" text="Improvement" />
       <LagkageDiagram procent="90%" text="Branching" />
     </div>
-  </div>
+
 </section>
 
 <style>
-  .container {
-    margin: 0;
-    display: grid;
-    grid-column: full;
+  .full {
+    margin:0;
     background-color: var(--color-primary-1);
-    height: 33.02644rem;
+    padding:10rem;
+    display:flex;
+    flex-direction:row;
+    align-items: stretch;
+    justify-content: center;
   }
 
-  .flex-container {
-    gap: 5.5625rem;
-    align-items: flex-start;
-    display: flex;
-    grid-column: content;
-    align-items: center;
-  }
-
-  .text {
-    width: 23.4375rem;
-  }
+ .text {
+    display:flex;
+    flex-direction:column;
+    padding:0;
+ }
 
   .lagkager {
     display: flex;
     flex-direction: row;
     gap: 1.625rem;
+  }
+
+  @media (max-width: 1000px) {
+    .lagkager {
+    display: grid;
+   grid-template-columns:1fr 1fr;
+    gap: 1.625rem;
+  }
+
+
+  .container {
+    margin: 0;
+    display: grid;
+    grid-column: full;
+    background-color: var(--color-primary-1);
+    padding:0;
+  
+  }
+
+
+ 
   }
 </style>
