@@ -1,0 +1,27 @@
+---
+const { img, title, text } = Astro.props;
+---
+
+<article class="card">
+  <img src={img} alt="" />
+  <h6>{title}</h6>
+  <p>{text}</p>
+</article>
+
+<style>
+  .card {
+    max-width: 17rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    border: 1px solid #eaeaea;
+    padding: 2.25rem 1.4375rem;
+    align-items: flex-start;
+    background: #fff;
+  }
+
+  img {
+    width: 3.29863rem;
+    height: 3.29863rem;
+  }
+</style>

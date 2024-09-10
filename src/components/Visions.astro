@@ -62,36 +62,35 @@
       <img src="/img/visions.avif" alt="" />
     </div>
   </div>
-      <ul class="container numbers">
-      <li>
-        <h1>1128+</h1>
-        <p>Succesful Work</p>
-      </li>
-      <li>
-        <h1>908+</h1>
-        <p>Team Member</p>
-      </li>
-      <li>
-        <h1>258+</h1>
-        <p>Happy Customers</p>
-      </li>
-      <li>
-        <h1>564+</h1>
-        <p>Creative Ideas</p>
-      </li>
-    </ul>
+  <ul class="container numbers">
+    <li>
+      <h1>1128+</h1>
+      <p>Succesful Work</p>
+    </li>
+    <li>
+      <h1>908+</h1>
+      <p>Team Member</p>
+    </li>
+    <li>
+      <h1>258+</h1>
+      <p>Happy Customers</p>
+    </li>
+    <li>
+      <h1>564+</h1>
+      <p>Creative Ideas</p>
+    </li>
+  </ul>
 </div>
 <style>
   .flex-container {
-    grid-column: content;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
   }
   .container {
     display: flex;
     flex-direction: row;
-    gap: 7.625rem;
+
     justify-content: center;
   }
   .list li {
@@ -99,7 +98,6 @@
     display: flex;
     flex-direction: row;
   }
-
 
   li {
     list-style: none;
@@ -162,35 +160,28 @@
     z-index: -3;
   }
 
-  @media(max-width:700px) {
+  @media (max-width: 700px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 3.625rem;
+    }
 
+    .numbers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+    }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 3.625rem;
-   
-  }
+    .img-container {
+      position: relative;
+      display: grid;
+      justify-items: center;
+    }
 
-  .numbers {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    text-align:center;
-
-  }
-
-  .img-container {
-    position: relative;
-    display:grid;
-    justify-items: center
-  }
-
-
-  .text-container {
-    display: grid;
-    gap: 1rem;
-
-  }
-
+    .text-container {
+      display: grid;
+      gap: 1rem;
+    }
   }
 </style>
