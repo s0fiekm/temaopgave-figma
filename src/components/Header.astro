@@ -2,8 +2,8 @@
 import Button from "./Button.astro";
 ---
 
-<header class="full full-width">
-  <div class="header-content ">
+<header class="full">
+  <div class="header-content">
     <h1>AskExperts</h1>
     <!-- Hidden checkbox to control the menu -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
@@ -19,7 +19,7 @@ import Button from "./Button.astro";
         <li><a href="/about">About</a></li>
       </ul>
     </nav>
-    <Button text="Login"/>
+    <Button text="Login" />
   </div>
 </header>
 
@@ -29,18 +29,17 @@ import Button from "./Button.astro";
     font-weight: 600;
   }
 
+  .full {
+    background: rgba(27, 27, 27, 0.91);
+
+    backdrop-filter: blur(10.5px);
+    padding: 2.375rem;
+  }
+
   .menu-collapsed {
     display: flex;
     align-items: center;
     gap: 30px;
-  }
-
-  .full {
-    display: flex;
-    background-color: rgba(27, 27, 27, 0.91);
-    grid-column: full;
-    justify-content: center;
-    padding: 38px;
   }
 
   .menu-toggle {
@@ -54,10 +53,11 @@ import Button from "./Button.astro";
   }
 
   .header-content {
+    gap: 2rem;
+    justify-content: space-evenly;
     max-width: var(--content-width);
-    color: white;
+    color: var(--color-secondary-2);
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     width: 100%;
     align-items: center;
@@ -84,15 +84,13 @@ import Button from "./Button.astro";
   }
 
   @media (max-width: 700px) {
-
     .header {
-      margin:0;
+      margin: 0;
     }
     .burger-menu {
       display: block;
     }
 
- 
     .menu-bar {
       display: none;
       position: absolute;
