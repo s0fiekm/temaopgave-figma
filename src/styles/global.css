@@ -64,7 +64,7 @@
       --heading-small: clamp(1.2rem, 1.3vw + .8rem, 2.18rem);
       --heading-large: clamp(1rem, 2vw + 1rem, 2.5rem);
       --heading-xlarge: clamp(1.8rem, 2vw + 1rem, 2.8rem);
-      --heading-xxlarge: clamp(2rem, 3vw + 1rem, 3.12rem);
+      --heading-xxlarge: clamp(2rem, 2vw + 1rem, 3.12rem);
     }
 
     h1 {
