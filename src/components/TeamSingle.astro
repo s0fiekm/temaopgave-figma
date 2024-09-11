@@ -1,0 +1,101 @@
+<section class="container">
+  <div class="img-container">
+    <img src="/img/daisy.avif" alt="" />
+  </div>
+  <div class="content">
+    <div class="person">
+      <div class="title-icons">
+        <div class="title">
+          <h4>Daisy Stella</h4>
+          <p>CEO at Company</p>
+        </div>
+        <div class="icons">
+          <img src="/icons/Facebook.svg" alt="" />
+          <img src="/icons/Instagram.svg" alt="" />
+          <img src="/icons/Twitter.svg" alt="" />
+          <img src="/icons/Linked-in.svg" alt="" />
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora harum
+        cumque quibusdam sapiente, recusandae earum asperiores vitae maxime
+        totam assumenda, iusto ipsam accusamus nisi eos, amet dolorem provident
+        minus eaque.
+      </p>
+    </div>
+    <div class="about">
+      <h4>Past experience</h4>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit sed do. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+
+    gap: 5.5625rem;
+    display: flex;
+    flex-direction: row;
+    grid-column: content;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .title-icons {
+    max-width: 523px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.56rem;
+  }
+
+  .person {
+    padding-bottom: 40px;
+  }
+
+  .about {
+    position: relative;
+    padding-top: 40px;
+  }
+
+  .img-container img {
+    border-radius: 1.25rem;
+  }
+
+  .about::before {
+    content: "";
+    height: 1px;
+    background-color: #c1c1c1;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media(max-width:700px) {
+    .container{
+        display:grid;
+        justify-items:center;
+    }
+  }
+</style>

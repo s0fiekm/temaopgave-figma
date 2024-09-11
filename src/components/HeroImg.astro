@@ -1,0 +1,66 @@
+---
+const { title, image } = Astro.props;
+import TextTag from "./TextTag.astro";
+---
+
+<section class="hero-banner full">
+  <div class="img-container">
+    <img src={image} alt="" />
+  </div>
+  <div class="text">
+    <div>
+      <TextTag text="Services" variant="yellow" />
+    </div>
+    <h1 class="tag">{title}</h1>
+  </div>
+</section>
+
+<style>
+  .hero-banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: auto auto auto;
+  }
+
+  .img-container {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin:;
+  }
+
+  .text {
+    grid-row: 2/2;
+    grid-column: 2/5;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    border-radius: 1.8125rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem 3.75rem;
+  }
+
+  @media (max-width: 1200px) {
+    .hero-banner {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      margin: 0;
+    }
+
+    .text {
+      grid-row: 2/2;
+      grid-column: 2/4;
+      padding: 1rem 2.75rem;
+    }
+    .img-container {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+    }
+  }
+</style>

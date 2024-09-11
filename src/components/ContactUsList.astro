@@ -1,0 +1,38 @@
+---
+const { icon, title, info } = Astro.props;
+---
+
+<ul class="grid-container">
+  <li class="card">
+    <img src={icon} alt="Icon" class="card-icon" />
+    <div class="text">
+      <p class="card-title">{title}</p>
+      <p class="card-info">{info}</p>
+    </div>
+  </li>
+</ul>
+
+<style>
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    display: flex;
+
+    .card-title {
+      color: #595566;
+    }
+
+    .card-info {
+      font-weight: 600;
+      color: var(--color-primary-3);
+    }
+  }
+  img {
+    width: 3.27075rem;
+    height: 3.27075rem;
+  }
+</style>

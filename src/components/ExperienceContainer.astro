@@ -1,0 +1,65 @@
+---
+import TextTag from "./TextTag.astro";
+import Diagram from "./Diagram.astro";
+---
+
+<section class="full">
+  <div class="text">
+    <div>
+      <TextTag text="Experience" variant="white" />
+    </div>
+    <h2>More than 25 years of experience</h2>
+    <p>3000+ our clients are insured around the World</p>
+  </div>
+  <div class="lagkager">
+    <Diagram procent="85%" text="Consistency" />
+    <Diagram procent="95%" text="Improvement" />
+    <Diagram procent="90%" text="Branching" />
+  </div>
+</section>
+
+<style>
+  .full {
+    margin: 0;
+    background-color: var(--color-primary-1);
+    padding: 8rem 18rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lagkager {
+    display: flex;
+    flex-direction: row;
+    gap: 1.625rem;
+    align-items: center;
+  }
+
+  @media (max-width: 1000px) {
+    .full {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      padding: 5rem;
+      gap: 4rem;
+    }
+
+    .text {
+      display: flex;
+      max-width: 100%;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .lagkager {
+      justify-content: center;
+    }
+  }
+</style>

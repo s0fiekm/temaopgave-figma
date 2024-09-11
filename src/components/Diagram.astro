@@ -1,0 +1,61 @@
+---
+const { procent } = Astro.props;
+const { text } = Astro.props;
+---
+
+<section class="lagkage">
+  <div class="parent" style="--percent: {procent};">
+    <h1>{procent}</h1>
+  </div>
+  <h6>{text}</h6>
+</section>
+
+<style>
+  @property --percent {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+  }
+
+  div {
+    border: 5px solid transparent;
+    background:
+      linear-gradient(var(--color-primary-1), var(--color-primary-1))
+        padding-box,
+      conic-gradient(var(--color-secondary-2) var(--percent), #daae3c 0)
+        border-box;
+
+    align-content: center;
+    text-align: center;
+
+    animation: --pie 2s infinite;
+  }
+
+  @keyframes --pie {
+    to {
+      --percent: 80%;
+    }
+  }
+
+  div {
+    aspect-ratio: 1;
+    width: 11.61675rem;
+    height: 11.61675rem;
+    border-radius: 1e2px;
+    margin-inline: auto;
+  }
+
+  .lagkage {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    div {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+</style>
