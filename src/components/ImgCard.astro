@@ -33,13 +33,16 @@ const { img, title } = Astro.props;
   }
 
   .card {
-    max-width: 20.875rem;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
-    align-items: center; /* Center content vertically */
+    align-items: center;
     text-align: center;
+    flex: 1 1 300px;
+    max-width: 350px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .card-image img {
