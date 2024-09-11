@@ -1,41 +1,24 @@
 ---
-interface List {
-  title: string;
-  info: string;
-  icon: string;
-}
-
-interface Props {
-  lists: List[];
-}
-
-const { lists } = Astro.props;
+const { icon, title, info } = Astro.props;
 ---
 
 <ul class="grid-container">
-  {
-    lists.map((list, index) => (
-      <li class="card">
-        <img src={list.icon} alt="Icon" class="card-icon" />
-        <div class="text">
-          <p class="card-title">{list.title}</p>
-          <p class="card-info">{list.info}</p>
-        </div>
-      </li>
-    ))
-  }
+  <li class="card">
+    <img src={icon} alt="Icon" class="card-icon" />
+    <div class="text">
+      <p class="card-title">{title}</p>
+      <p class="card-info">{info}</p>
+    </div>
+  </li>
 </ul>
 
 <style>
-  .grid-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-  }
   .text {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
+
   .card {
     display: flex;
 
