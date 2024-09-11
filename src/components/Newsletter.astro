@@ -3,32 +3,33 @@ import Button from "./Button.astro";
 ---
 
 <section class="newsletter-container">
-    <div class="background-elements">
-      <div class="pattern"></div>
-      <div class="green-shape"></div>
+  <div class="background-elements">
+    <div class="pattern"></div>
+    <div class="green-shape"></div>
+  </div>
+  <div class="newsletter-content">
+    <div class="text-section">
+      <h2>Subscribe Our Newsletter</h2>
+      <p>
+        Build stronger Customer Relationships with <span>Consultalk</span>
+      </p>
     </div>
-    <div class="newsletter-content">
-      <div class="text-section">
-        <h2>Subscribe Our Newsletter</h2>
-        <p>
-          Build stronger Customer Relationships with <span>Consultalk</span>
-        </p>
-      </div>
-      <div class="input-section">
-        <input type="email" placeholder="your mail address" class="email-input" />
-        <Button text="subscribe" />
-      </div>
+    <div class="input-section">
+      <input type="email" placeholder="your mail address" class="email-input" />
+      <Button text="subscribe" variant="yellow" />
     </div>
-  </section>
+  </div>
+</section>
 <style>
   .newsletter-container {
+    width: 100%;
     height: 15.75rem;
     background-color: var(--color-primary-3);
     display: grid;
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    container-type: inline-size; 
+    container-type: inline-size;
   }
 
   .newsletter-content {
@@ -108,15 +109,15 @@ import Button from "./Button.astro";
 
   @container (max-width: 800px) {
     .newsletter-content {
-      display:grid;
-      grid-template-columns:1fr;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 1rem;
       padding: 1.5rem;
       justify-items: center;
     }
 
     .input-section {
-        z-index:2;
+      z-index: 2;
       width: 70%;
       flex-direction: column;
       gap: 0.5rem;
@@ -124,11 +125,11 @@ import Button from "./Button.astro";
     }
 
     .email-input {
-      width: 100%; 
+      width: 100%;
     }
 
     .text-section h2 {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
     }
   }
 </style>

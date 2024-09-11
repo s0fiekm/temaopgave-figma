@@ -5,7 +5,9 @@ import TextTag from "./TextTag.astro";
 
 <section class="container full">
   <div class="text-container">
-    <TextTag text="Growing with our clients" />
+    <div>
+      <TextTag text="Growing with our clients" variant="yellow" />
+    </div>
     <h2>Our core values & principles</h2>
     <p>
       Capitalize on low hanging fruit to identify a ballpark value added
@@ -39,20 +41,34 @@ import TextTag from "./TextTag.astro";
 
 <style>
   .container {
-    padding: 6.25rem 16.5rem;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 6.25rem 15rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     background-color: var(--color-primary-3);
-    justify-items: start;
+    justify-items: center;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 14rem;
+    gap: 1rem;
   }
 
   .cards {
-    gap: 2.5rem;
-    align-items: flex-start;
+    align-items: center;
+    gap: 2rem;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
   }
+
   .content-container {
     gap: 2rem;
     justify-content: center;

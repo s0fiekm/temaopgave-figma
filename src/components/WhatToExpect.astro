@@ -12,7 +12,7 @@ import TextTag from "../components/TextTag.astro";
   </div>
   <div class="text-box">
     <div>
-      <TextTag text="WE'LL WORK FOR YOU" />
+      <TextTag text="WE'LL WORK FOR YOU" variant="yellow" />
       <h2>What to expect</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -22,48 +22,14 @@ import TextTag from "../components/TextTag.astro";
       </p>
     </div>
     <div class="check-box">
-      <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 23 23"
-        fill="none">
-        <path
-          d="M15.8545 8.83813L9.83579 14.58L6.83154 11.7091"
-          stroke="#4EAF4E"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        <path
-          d="M11.343 21.1423C16.7793 21.1423 21.1863 16.7354 21.1863 11.2991C21.1863 5.86279 16.7793 1.45581 11.343 1.45581C5.90673 1.45581 1.49976 5.86279 1.49976 11.2991C1.49976 16.7354 5.90673 21.1423 11.343 21.1423Z"
-          stroke="#4EAF4E"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
+      <img src="/icons/tick.svg" alt="" />
       <p class="text">
         Bring to the table win-win survival strategies to ensure proactive
         domination. At the end of the day.
       </p>
     </div>
     <div class="check-box">
-      <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 23 23"
-        fill="none">
-        <path
-          d="M15.8545 8.83813L9.83579 14.58L6.83154 11.7091"
-          stroke="#4EAF4E"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        <path
-          d="M11.343 21.1423C16.7793 21.1423 21.1863 16.7354 21.1863 11.2991C21.1863 5.86279 16.7793 1.45581 11.343 1.45581C5.90673 1.45581 1.49976 5.86279 1.49976 11.2991C1.49976 16.7354 5.90673 21.1423 11.343 21.1423Z"
-          stroke="#4EAF4E"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
+      <img src="/icons/tick.svg" alt="" />
       <p class="text">
         Capitalize on low hanging fruit to identify a ballpark value added
         activity to beta test override the digital.
@@ -82,7 +48,7 @@ import TextTag from "../components/TextTag.astro";
 
   .text-box {
     display: flex;
-    width: 30.0625rem;
+
     flex-direction: column;
     align-items: flex-start;
     gap: 0.875rem;
@@ -104,17 +70,16 @@ import TextTag from "../components/TextTag.astro";
 
   .background {
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 20px;
-    margin-left: -20px;
+    top: 5%;
+    left: -5%;
     background-color: var(--color-primary-2);
     border-radius: 1.25rem;
     z-index: 2;
-    width: 10.25rem;
-    height: 11.4375rem;
+    width: 30%;
+    height: 40%;
     transform: rotate(-90deg);
     flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
   }
 
   .container-pattern {
@@ -145,8 +110,7 @@ import TextTag from "../components/TextTag.astro";
     background-image: url("/img/Pattern.svg");
     position: absolute;
     top: 0;
-    left: 0;
-    margin-left: -50px;
+    left: -9%;
     width: 250px;
     height: 250px;
     background-size: contain;
@@ -154,10 +118,18 @@ import TextTag from "../components/TextTag.astro";
     z-index: 1;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
+    .container {
+      gap: 5.125rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 600px) {
     .container {
       align-items: center;
-      margin: 30px;
       display: flex;
       flex-direction: column;
     }

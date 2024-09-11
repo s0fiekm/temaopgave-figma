@@ -1,10 +1,31 @@
 ---
-const { text, makeWhite } = Astro.props;
+const { text, variant } = Astro.props;
 
-const isWhiteBackground = makeWhite || false;
+const styles = {
+  yellow: {
+    bgColor: "var(--color-primary-1)",
+    color: "var(--color-secondary-2)",
+  },
+  green: {
+    bgColor: "var(--color-primary-2)",
+    color: "var(--color-secondary-2)",
+  },
+  black: {
+    bgColor: "var(--color-primary-3)",
+    color: "var(--color-secondary-2)",
+  },
+  white: {
+    bgColor: "var(--color-secondary-2)",
+    color: "var(--color-primary-3)",
+  },
+};
+
+const selectedStyle = styles[variant] || styles["yellow"];
 ---
 
-<div class={`text-tag ${isWhiteBackground ? "white-bg" : "yellow-bg"}`}>
+<div
+  class={`text-tag`}
+  style={`background-color: ${selectedStyle.bgColor}; color: ${selectedStyle.color};`}>
   <p>{text}</p>
 </div>
 
