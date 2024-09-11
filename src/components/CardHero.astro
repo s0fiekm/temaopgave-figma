@@ -1,6 +1,7 @@
 ---
-const { header } = Astro.props;
-const { paragraph } = Astro.props;
+import Button from "./Button.astro";
+
+const { header, paragraph, buttonText, buttonVariant } = Astro.props;
 ---
 
 <div class="flex-container">
@@ -8,26 +9,32 @@ const { paragraph } = Astro.props;
   <p>
     {paragraph}
   </p>
-  <button class="card-btn">Our Services</button>
+  <Button text={buttonText} variant="black" />
 </div>
 
 <style>
   .flex-container {
+    justify-content: flex-start;
     z-index: 2;
     display: flex;
     padding: 2.875rem;
     flex-direction: column;
-    justify-content: center;
-    max-width: 24rem;
     align-items: start;
     gap: 10px;
     background-color: rgba(38, 38, 38, 0.9);
     backdrop-filter: blur(16px);
     border-radius: 20px;
+    max-width: 100%;
   }
 
   h3,
   p {
     color: var(--color-secondary-1);
+  }
+
+  @media (max-width: 1300px) {
+    .flex-container {
+      width: 20rem;
+    }
   }
 </style>

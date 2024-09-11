@@ -7,28 +7,24 @@ import TextTag from "./TextTag.astro";
   <div class="img-container">
     <img src={image} alt="" />
   </div>
-  <div class="flex-overlay">
-    <div class="text-overlay">
-      <div>
-        <TextTag text="Services" />
-      </div>
-      <h1 class="tag">{title}</h1>
+  <div class="text">
+    <div>
+      <TextTag text="Services" />
     </div>
+    <h1 class="tag">{title}</h1>
   </div>
 </section>
 
 <style>
   .hero-banner {
     display: grid;
-    grid-template-areas: "overlay";
-    grid-column: full-start / full-end;
-    overflow: hidden;
-    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto;
   }
 
   .img-container {
-    grid-area: overlay;
-    z-index: 1;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
   }
 
   .img-container img {
@@ -38,18 +34,9 @@ import TextTag from "./TextTag.astro";
     display: block;
   }
 
-  .flex-overlay {
-    grid-column: content-start / content-end;
-    grid-column: content;
-    grid-area: overlay;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 2;
-    padding-left: 15rem;
-  }
-
-  .text-overlay {
+  .text {
+    grid-row: 2/3;
+    grid-column: 2/4;
     display: flex;
     flex-direction: column;
     border-radius: 1.8125rem;

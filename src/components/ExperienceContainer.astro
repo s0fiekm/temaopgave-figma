@@ -5,62 +5,58 @@ const makeBackgroundWhite = true;
 ---
 
 <section class="full">
-
-    <div class="text">
-        <div>
-      <TextTag text="Experience" makeWhite={makeBackgroundWhite} /></div>
-      <h2>More than 25 years <br>of experience</h2>
-      <p>3000+ our clients are insured around the World</p>
+  <div class="text">
+    <div>
+      <TextTag text="Experience" makeWhite={makeBackgroundWhite} />
     </div>
-    <div class="lagkager">
-      <LagkageDiagram procent="85%" text="Consistency" />
-      <LagkageDiagram procent="95%" text="Improvement" />
-      <LagkageDiagram procent="90%" text="Branching" />
-    </div>
-
+    <h2>More than 25 years of experience</h2>
+    <p>3000+ our clients are insured around the World</p>
+  </div>
+  <div class="lagkager">
+    <LagkageDiagram procent="85%" text="Consistency" />
+    <LagkageDiagram procent="95%" text="Improvement" />
+    <LagkageDiagram procent="90%" text="Branching" />
+  </div>
 </section>
 
 <style>
   .full {
-    margin:0;
+    margin: 0;
     background-color: var(--color-primary-1);
-    padding:10rem;
-    display:flex;
-    flex-direction:row;
+    padding: 10rem;
+    display: flex;
+    flex-direction: row;
     align-items: stretch;
     justify-content: center;
+    gap: 8rem;
   }
 
- .text {
-    display:flex;
-    flex-direction:column;
-    padding:0;
- }
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
 
   .lagkager {
     display: flex;
     flex-direction: row;
     gap: 1.625rem;
+    align-items: center;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 700px) {
+    .full {
+      display: flex;
+      flex-direction: column;
+      gap: 1.625rem;
+    }
+
+    .text {
+      max-width: 100%;
+      align-items: center;
+    }
+
     .lagkager {
-    display: grid;
-   grid-template-columns:1fr 1fr;
-    gap: 1.625rem;
-  }
-
-
-  .container {
-    margin: 0;
-    display: grid;
-    grid-column: full;
-    background-color: var(--color-primary-1);
-    padding:0;
-  
-  }
-
-
- 
+      justify-content: center;
+    }
   }
 </style>

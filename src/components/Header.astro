@@ -24,15 +24,8 @@ import Button from "./Button.astro";
 </header>
 
 <style>
-  h1 {
-    font-size: 30px;
-    font-weight: 600;
-  }
-
   .full {
     background: rgba(27, 27, 27, 0.91);
-
-    backdrop-filter: blur(10.5px);
     padding: 2.375rem;
   }
 
@@ -53,7 +46,6 @@ import Button from "./Button.astro";
   }
 
   .header-content {
-    gap: 2rem;
     justify-content: space-evenly;
     max-width: var(--content-width);
     color: var(--color-secondary-2);
@@ -61,6 +53,7 @@ import Button from "./Button.astro";
     flex-direction: row;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
   }
   li a {
     color: white;

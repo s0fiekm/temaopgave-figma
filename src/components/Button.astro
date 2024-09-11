@@ -1,9 +1,26 @@
 ---
-const { text } = Astro.props;
+const { text, variant } = Astro.props;
+
+const styles = {
+  yellow: {
+    bgColor: "var(--color-primary-1)",
+    color: "var(--color-primary-3)",
+  },
+  white: {
+    bgColor: "var(--color-secondary-2)",
+    color: "var(--color-primary-3)",
+  },
+  black: {
+    bgColor: "var(--color-primary-3)",
+    color: "var(--color-secondary-1)",
+  },
+};
+
+const selectedStyle = styles[variant] || styles["yellow"];
 ---
 
-<button>
-  <a href="">{text}</a>
+<button style={`background-color: ${selectedStyle.bgColor};`}>
+  <a href="" style={`color: ${selectedStyle.color};`}>{text}</a>
 </button>
 
 <style>
@@ -22,7 +39,6 @@ const { text } = Astro.props;
 
     & a {
       padding: 0.9375rem 1.875rem;
-      color: var(--color-primary-3);
       text-align: center;
       text-decoration: none;
       display: inline-block;

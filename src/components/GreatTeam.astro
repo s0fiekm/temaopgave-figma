@@ -13,7 +13,7 @@ import ImgCard from "./ImgCard.astro";
         veniam, quis nostrud exercitation.
       </p>
     </div>
-    <Button text="Join Our Team" />
+    <Button text="Join Our Team" variant="black" />
   </div>
   <div class="img-container">
     <ImgCard title="Sarah Jasmine" img="img/Sarah.avif" />
@@ -33,9 +33,9 @@ import ImgCard from "./ImgCard.astro";
   }
   .img-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 3.1rem;
+    justify-content: space-between;
   }
 
   .content-container {
@@ -43,6 +43,5 @@ import ImgCard from "./ImgCard.astro";
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    gap: 25.125rem;
   }
 </style>

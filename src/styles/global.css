@@ -30,14 +30,19 @@
   
   }
 
-
-@media (max-width: 600px) {
+  @media (max-width: 1200px) {
+ 
+    body {
+        display: flex; /* Eller brug en anden responsiv layoutmetode */
+        flex-direction: column; /* Eller anden justering der passer til layoutet */
+        gap: var(--gap); /* Hvis gap stadig skal bruges */
+    }
+}
 
 
 
 
   
-}
 
 
     .main-layout > :nth-child(n+3){
@@ -96,10 +101,15 @@ h6 {
   font-size: var(--heading-base);
 }
 
-p, a {
+p{
   font-family: var(--font-family-secondary);
   font-size: var(--paragraph);
   color: var(--color-secondary-3);
+}
+
+a {
+  font-family: var(--font-family-secondary);
+  font-size: var(--paragraph);
 }
     
   }
