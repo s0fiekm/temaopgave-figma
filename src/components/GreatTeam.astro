@@ -1,0 +1,55 @@
+---
+import Button from "./Button.astro";
+import ImgCard from "./ImgCard.astro";
+---
+
+<div class="flex-row text-container">
+  <div class="text-box">
+    <h2>Meet Our Great Team</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam,
+      quis nostrud exercitation.
+    </p>
+  </div>
+  <div>
+    <Button text="join our team" variant="black" />
+  </div>
+</div>
+<section class="img-container">
+  <ImgCard title="Sarah Jasmine" img="img/Sarah.avif" />
+  <ImgCard title="John Carter" img="img/john.avif" />
+  <ImgCard title="Daisy Stella" img="img/daisy.avif" />
+  <ImgCard title="Maya Elisabeth" img="img/maya.avif" />
+  <ImgCard title="Ryan Jackson" img="img/ryan.avif" />
+  <ImgCard title="Lilly Victoria" img="img/lilly.avif" />
+</section>
+
+<style>
+  .text-container {
+    align-items: flex-end;
+  }
+
+  .img-container {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  @media (max-width: 700px) {
+    .img-container {
+      display: grid;
+      gap: 3rem;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import TextTag from "./TextTag.astro";
+const { img, title } = Astro.props;
+---
+
+<div>
+  <a href="/teamsingle" class="card-link">
+    <div class="card">
+      <div class="card-image">
+        <img src={img} alt="" />
+      </div>
+      <div class="card-content">
+        <h3>{title}</h3>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high-level
+          overviews.
+        </p>
+        <div class="social-icons">
+          <a href="#"><img src="icons/Instagram.svg" alt="Instagram" /></a>
+          <a href="#"><img src="icons/Facebook.svg" alt="Facebook" /></a>
+          <a href="#"><img src="icons/Twitter.svg" alt="Twitter" /></a>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<style>
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 350px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+</style>

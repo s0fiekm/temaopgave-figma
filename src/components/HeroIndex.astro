@@ -1,0 +1,59 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="full">
+  <div class="hero">
+    <div class="content">
+      <h1>Adam Buschemia<br />Business Consultant</h1>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <div>
+        <Button text="Book a Meeting" variant="white" />
+      </div>
+    </div>
+    <div class="consultant-image">
+      <img src="/img/Photo.avif" alt="Consultant Image" />
+    </div>
+  </div>
+
+  <style>
+    .hero {
+      background: var(--color-primary-3);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      grid-column: content;
+    }
+    .content {
+      align-items: stretch;
+      align-items: center;
+      padding-left: clamp(2rem, 20vw, 300px);
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      gap: 1rem;
+    }
+
+    .consultant-image img {
+      width: 100%;
+      height: auto;
+      object-fit: fill;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        background: var(--color-primary-3);
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        text-align: center;
+        padding: 5rem;
+      }
+    }
+  </style>
+</section>

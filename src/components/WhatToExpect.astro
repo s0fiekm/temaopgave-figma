@@ -1,0 +1,137 @@
+---
+import TextTag from "../components/TextTag.astro";
+---
+
+<section class="container">
+  <div class="container-pattern">
+    <div class="pattern"></div>
+    <div class="background"></div>
+    <div class="img-container">
+      <img src="../img/what-to-expect.avif" alt="" />
+    </div>
+  </div>
+  <div class="text-box">
+    <div>
+      <TextTag text="WE'LL WORK FOR YOU" variant="yellow" />
+      <h2>What to expect</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <div class="check-box">
+      <img src="/icons/tick.svg" alt="" />
+      <p class="text">
+        Bring to the table win-win survival strategies to ensure proactive
+        domination. At the end of the day.
+      </p>
+    </div>
+    <div class="check-box">
+      <img src="/icons/tick.svg" alt="" />
+      <p class="text">
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity to beta test override the digital.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    gap: 5.125rem;
+    display: inline-flex;
+    align-items: flex-start;
+    grid-column: content;
+  }
+
+  .text-box {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+
+    & > * + * {
+      color: var(--color-secondary-3);
+    }
+  }
+
+  .check-box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 1.23044rem;
+  }
+
+  .background {
+    position: absolute;
+    top: 5%;
+    left: -5%;
+    background-color: var(--color-primary-2);
+    border-radius: 1.25rem;
+    z-index: 2;
+    width: 30%;
+    height: 40%;
+    transform: rotate(-90deg);
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container-pattern {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .img-container {
+    margin-top: 30px;
+    margin-left: -30px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: 1.75rem;
+  }
+
+  .img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .pattern {
+    background-image: url("/img/Pattern.svg");
+    position: absolute;
+    top: 0;
+    left: -9%;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  @media (max-width: 1000px) {
+    .container {
+      gap: 5.125rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
