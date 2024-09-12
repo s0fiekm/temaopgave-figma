@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 ---
 
 <nav class="full">
-  <div class="content">
+  <div class="content flex-row">
     <div class="logo">
       <a href="/"><h1>AskExperts</h1></a>
     </div>
@@ -39,8 +39,6 @@ import Button from "./Button.astro";
 
   .content {
     align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding-inline: max(1rem, 50% - var(--content) / 2);
   }

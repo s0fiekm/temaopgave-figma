@@ -1,11 +1,15 @@
-<section class="container">
-  <div class="img-container">
-    <img src="/img/daisy.avif" alt="" />
+<section class="container flex-row">
+  <div class="pattern-container">
+    <div class="pattern"></div>
+    <div class="background"></div>
+    <div class="img-container">
+      <img src="/img/daisy.avif" alt="" />
+    </div>
   </div>
   <div class="content">
     <div class="person">
       <div class="title-icons">
-        <div class="title">
+        <div class="title text-box">
           <h4>Daisy Stella</h4>
           <p>CEO at Company</p>
         </div>
@@ -42,60 +46,93 @@
 
 <style>
   .container {
+    margin-top: 10%;
+    gap: 5rem;
+  }
 
-    gap: 5.5625rem;
+  .container-pattern {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    grid-column: content;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title::after {
+    content: "";
+    border-right: solid 1px;
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+
+  .background {
+    position: absolute;
+    top: 35%;
+    left: 14%;
+    background-color: var(--color-primary-2);
+    border-radius: 1.25rem;
+    z-index: 2;
+    width: 10%;
+    height: 20%;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
   }
 
   .title-icons {
-    max-width: 523px;
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
   }
 
   .icons {
+    gap: 1rem;
     display: flex;
     flex-direction: row;
-    gap: 1.56rem;
+    align-items: center;
   }
 
-  .person {
-    padding-bottom: 40px;
-  }
-
-  .about {
+  .img-container {
     position: relative;
-    padding-top: 40px;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: 1.75rem;
   }
 
-  .img-container img {
-    border-radius: 1.25rem;
-  }
-
-  .about::before {
-    content: "";
-    height: 1px;
-    background-color: #c1c1c1;
-    width: 100%;
+  .pattern {
+    background-image: url("/img/Pattern.svg");
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30%;
+    left: 12%;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
   }
+  @media (max-width: 600px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  @media(max-width:700px) {
-    .container{
-        display:grid;
-        justify-items:center;
+    .pattern {
+      top: 30%;
+      left: 55%;
+    }
+
+    .background {
+      top: 35%;
+      left: 64%;
+      width: 25%;
+      height: 20%;
+    }
+
+    .content {
+      max-width: 30rem;
     }
   }
 </style>

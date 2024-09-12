@@ -1,6 +1,13 @@
+---
+import TextTag from "./TextTag.astro";
+---
+
 <div class="flex-container">
-  <div class="grid-container">
-    <div class="text-container">
+  <div class="flex-row">
+    <div class="text-box">
+      <div>
+        <TextTag text="Our vision" variant="green" />
+      </div>
       <h2>Turn your ideas into reality.</h2>
       <p>
         Capitalize on low hanging fruit to identify a ballpark value added
@@ -30,7 +37,7 @@
       <img src="/img/visions.avif" alt="" />
     </div>
   </div>
-  <ul class="container">
+  <ul class="flex-row list-container">
     <li class="facts">
       <h1>1128+</h1>
       <p>Succesful Work</p>
@@ -60,40 +67,22 @@
     justify-content: center;
   }
 
-  .grid-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  .container {
-    flex-wrap: wrap;
-    gap: 5.625rem;
-    display: flex;
-    flex-direction: row;
+  .list-container {
+    gap: 10rem;
     justify-content: center;
   }
 
   .facts {
     text-align: center;
   }
-
-  .list,
-  li {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
+  ul {
+    list-style: none;
   }
 
   .img-container {
     width: 100%;
     text-align: center;
     position: relative;
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
   }
 
   img {

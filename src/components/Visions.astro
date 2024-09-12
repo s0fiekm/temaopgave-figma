@@ -1,6 +1,6 @@
-<div class="flex-container">
-  <div class="container">
-    <div class="text-container">
+<div class="flex-row">
+  <div class="flex-row">
+    <div class="text-box">
       <h2>Turn your ideas into reality.</h2>
       <p>
         Capitalize on low hanging fruit to identify a ballpark value added
@@ -8,49 +8,15 @@
         DevOps.
       </p>
       <ul class="list">
-        <li>
-          <svg
-            class="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 23 23"
-            fill="none">
-            <path
-              d="M15.8545 8.83813L9.83579 14.58L6.83154 11.7091"
-              stroke="#4EAF4E"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M11.343 21.1423C16.7793 21.1423 21.1863 16.7354 21.1863 11.2991C21.1863 5.86279 16.7793 1.45581 11.343 1.45581C5.90673 1.45581 1.49976 5.86279 1.49976 11.2991C1.49976 16.7354 5.90673 21.1423 11.343 21.1423Z"
-              stroke="#4EAF4E"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
+        <li class="flex-row list-item">
+          <img src="/icons/tick.svg" alt="" />
           <p>
             Bring to the table win-win survival strategies to ensure proactive
             domination. At the end of the day.
           </p>
         </li>
-        <li>
-          <svg
-            class="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 23 23"
-            fill="none">
-            <path
-              d="M15.8545 8.83813L9.83579 14.58L6.83154 11.7091"
-              stroke="#4EAF4E"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M11.343 21.1423C16.7793 21.1423 21.1863 16.7354 21.1863 11.2991C21.1863 5.86279 16.7793 1.45581 11.343 1.45581C5.90673 1.45581 1.49976 5.86279 1.49976 11.2991C1.49976 16.7354 5.90673 21.1423 11.343 21.1423Z"
-              stroke="#4EAF4E"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
+        <li class="flex-row list-item">
+          <img src="/icons/tick.svg" alt="" />
           <p>
             Capitalize on low hanging fruit to identify a ballpark value added
             activity to beta test override the digital.
@@ -58,81 +24,62 @@
         </li>
       </ul>
     </div>
-    <div class="img-container">
-      <img src="/img/visions.avif" alt="" />
-    </div>
   </div>
-  <ul class="container numbers">
-    <li>
-      <h1>1128+</h1>
-      <p>Succesful Work</p>
-    </li>
-    <li>
-      <h1>908+</h1>
-      <p>Team Member</p>
-    </li>
-    <li>
-      <h1>258+</h1>
-      <p>Happy Customers</p>
-    </li>
-    <li>
-      <h1>564+</h1>
-      <p>Creative Ideas</p>
-    </li>
-  </ul>
+  <div class="img-container">
+    <img src="/img/visions.avif" alt="" />
+  </div>
 </div>
+<ul class="container flex-row">
+  <li>
+    <h1>1128+</h1>
+    <p>Succesful Work</p>
+  </li>
+  <li>
+    <h1>908+</h1>
+    <p>Team Member</p>
+  </li>
+  <li>
+    <h1>258+</h1>
+    <p>Happy Customers</p>
+  </li>
+  <li>
+    <h1>564+</h1>
+    <p>Creative Ideas</p>
+  </li>
+</ul>
+
 <style>
+  .flex-row {
+    gap: 4rem;
+  }
+  .list-item {
+    gap: 2rem;
+  }
   .flex-container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
   .container {
-    display: flex;
-    flex-direction: row;
-
     justify-content: center;
   }
-  .list li {
-    display: flex;
-    display: flex;
-    flex-direction: row;
-  }
 
-  li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
   .list {
     gap: 1rem;
     display: flex;
     flex-direction: column;
   }
-  .icon {
-    width: 3rem;
-    height: 1.23044rem;
-  }
 
   ul {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     gap: 8.4375rem;
+    list-style: none;
   }
 
-  .img-container {
-    position: relative;
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
+  .img-container,
   img {
+    position: relative;
     border-radius: 1.25rem;
   }
 

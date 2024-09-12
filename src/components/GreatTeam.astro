@@ -3,8 +3,8 @@ import Button from "./Button.astro";
 import ImgCard from "./ImgCard.astro";
 ---
 
-<div class="text-container">
-  <div class="text">
+<div class="flex-row text-container">
+  <div class="text-box">
     <h2>Meet Our Great Team</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -27,10 +27,7 @@ import ImgCard from "./ImgCard.astro";
 
 <style>
   .text-container {
-    display: flex;
-    flex-direction: row;
     align-items: flex-end;
-    gap: 25rem;
   }
 
   .img-container {

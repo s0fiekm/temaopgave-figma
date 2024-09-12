@@ -2,7 +2,7 @@
 import HeroCard from "./HeroCard.astro";
 ---
 
-<section class="card-container">
+<section class="card-container flex-row">
   <HeroCard
     header="Finance & Restructuring"
     paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
@@ -23,12 +23,10 @@ import HeroCard from "./HeroCard.astro";
 <style>
   .card-container {
     transform: translateY(-50px);
-    display: flex;
     justify-content: center;
-    flex-direction: row;
     gap: 2rem;
     z-index: 2;
-    align-items: center;
+    align-items: stretch;
   }
 
   @media (max-width: 1000px) {
