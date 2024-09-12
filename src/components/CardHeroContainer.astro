@@ -1,0 +1,43 @@
+---
+import HeroCard from "./HeroCard.astro";
+---
+
+<section class="card-container">
+  <HeroCard
+    header="Finance & Restructuring"
+    paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
+    buttonText="Our Services"
+  />
+  <HeroCard
+    header="Our Approach"
+    paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
+    buttonText="More About"
+  />
+  <HeroCard
+    header="Consultalk Result"
+    paragraph="Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling."
+    buttonText="Explore Our Solution"
+  />
+</section>
+
+<style>
+  .card-container {
+    transform: translateY(-50px);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    z-index: 2;
+    align-items: center;
+  }
+
+  @media (max-width: 1000px) {
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      transform: translateY(2rem);
+    }
+  }
+</style>

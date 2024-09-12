@@ -1,0 +1,163 @@
+<div class="flex-container">
+  <div class="grid-container">
+    <div class="text-container">
+      <h2>Turn your ideas into reality.</h2>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity beta test. Override the digital divide with additional from
+        DevOps.
+      </p>
+      <ul class="list">
+        <li>
+          <img class="icon" src="./icons/tick.svg" alt="" />
+          <p>
+            Bring to the table win-win survival strategies to ensure proactive
+            domination. At the end of the day.
+          </p>
+        </li>
+        <li>
+          <div>
+            <img class="icon" src="./icons/tick.svg" alt="" />
+          </div>
+          <p>
+            Capitalize on low hanging fruit to identify a ballpark value added
+            activity to beta test override the digital.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="img-container">
+      <img src="/img/visions.avif" alt="" />
+    </div>
+  </div>
+  <ul class="container">
+    <li class="facts">
+      <h1>1128+</h1>
+      <p>Succesful Work</p>
+    </li>
+    <li class="facts">
+      <h1>908+</h1>
+      <p>Team Member</p>
+    </li>
+    <li class="facts">
+      <h1>258+</h1>
+      <p>Happy Customers</p>
+    </li>
+    <li class="facts">
+      <h1>564+</h1>
+      <p>Creative Ideas</p>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .flex-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .container {
+    flex-wrap: wrap;
+    gap: 5.625rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .facts {
+    text-align: center;
+  }
+
+  .list,
+  li {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  img {
+    border-radius: 1.25rem;
+  }
+
+  .img-container::before {
+    content: "";
+    position: absolute;
+    top: -4%;
+    right: 6%;
+    width: 20%;
+    height: 25%;
+    background: #4eaf4e;
+    border-radius: 0.8rem;
+    z-index: -2;
+  }
+
+  .img-container::after {
+    content: "";
+    position: absolute;
+    top: -8%;
+    right: 0%;
+    width: 30%;
+    height: 40%;
+    background: url("./icons/pattern.svg") no-repeat;
+    background-size: contain;
+    z-index: -3;
+  }
+
+  .icon {
+    max-width: 1.23044rem;
+    height: 1.23044rem;
+  }
+
+  @media (max-width: 1200px) {
+    .flex-container {
+      margin-bottom: 4rem;
+    }
+    .grid-container {
+      gap: 2rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0 7rem 0 6rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .img-container::before {
+      display: none;
+    }
+
+    .img-container::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

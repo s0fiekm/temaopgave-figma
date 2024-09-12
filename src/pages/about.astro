@@ -1,14 +1,12 @@
 ---
 import Footer from "../components/Footer.astro";
-import CardHeroContainer from "../components/CardHeroContainer.astro";
+import OurTeam from "../components/OurTeam.astro";
 import Header from "../components/Header.astro";
-import HeroIndex from "../components/HeroIndex.astro";
-import WhatToExpect from "../components/WhatToExpect.astro";
-import ScrollingContainer from "../components/ScrollingContainer.astro";
-import ExperienceContainer from "../components/ExperienceContainer.astro";
-import ValuesContainer from "../components/ValuesContainer.astro";
-import ContactUsContainer from "../components/ContactUsContainer.astro";
+import HeroImg from "../components/HeroImg.astro";
+import OurVisionContainer from "../components/OurVisionContainer.astro";
 import Newsletter from "../components/Newsletter.astro";
+import ValuesContainer from "../components/ValuesContainer.astro";
+import Accordion from "../components/Accordion.astro";
 ---
 
 <html lang="en">
@@ -26,13 +24,14 @@ import Newsletter from "../components/Newsletter.astro";
   </head>
   <body>
     <Header />
-    <HeroIndex />
-    <CardHeroContainer />
-    <WhatToExpect />
-    <ScrollingContainer />
-    <ExperienceContainer />
+    <HeroImg
+      title="Creative Services For Boost Your Business Growth"
+      image="/img/service.avif"
+    />
+    <OurVisionContainer />
     <ValuesContainer />
-    <ContactUsContainer />
+    <OurTeam />
+    <Accordion />
     <Newsletter />
     <Footer />
   </body>

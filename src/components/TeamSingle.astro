@@ -1,0 +1,138 @@
+<section class="container flex-row">
+  <div class="pattern-container">
+    <div class="pattern"></div>
+    <div class="background"></div>
+    <div class="img-container">
+      <img src="/img/daisy.avif" alt="" />
+    </div>
+  </div>
+  <div class="content">
+    <div class="person">
+      <div class="title-icons">
+        <div class="title text-box">
+          <h4>Daisy Stella</h4>
+          <p>CEO at Company</p>
+        </div>
+        <div class="icons">
+          <img src="/icons/Facebook.svg" alt="" />
+          <img src="/icons/Instagram.svg" alt="" />
+          <img src="/icons/Twitter.svg" alt="" />
+          <img src="/icons/Linked-in.svg" alt="" />
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora harum
+        cumque quibusdam sapiente, recusandae earum asperiores vitae maxime
+        totam assumenda, iusto ipsam accusamus nisi eos, amet dolorem provident
+        minus eaque.
+      </p>
+    </div>
+    <div class="about">
+      <h4>Past experience</h4>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit sed do. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container {
+    margin-top: 10%;
+    gap: 5rem;
+  }
+
+  .container-pattern {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title::after {
+    content: "";
+    border-right: solid 1px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .background {
+    position: absolute;
+    top: 35%;
+    left: 14%;
+    background-color: var(--color-primary-2);
+    border-radius: 1.25rem;
+    z-index: 2;
+    width: 10%;
+    height: 20%;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .title-icons {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icons {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .img-container {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: 1.75rem;
+  }
+
+  .pattern {
+    background-image: url("/img/Pattern.svg");
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  @media (max-width: 600px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pattern {
+      top: 30%;
+      left: 55%;
+    }
+
+    .background {
+      top: 35%;
+      left: 64%;
+      width: 25%;
+      height: 20%;
+    }
+
+    .content {
+      max-width: 30rem;
+    }
+  }
+</style>

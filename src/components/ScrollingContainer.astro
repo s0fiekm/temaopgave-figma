@@ -1,0 +1,159 @@
+<section class="container">
+  <div class="content">
+    <div class="text">
+      <img src="/icons/fp.svg" alt="" />
+      <h2>Financial Projections</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <div class="buttons">
+      <button><span class="arrow">&#8592;</span></button>
+      <button><span class="arrow">&#8594;</span></button>
+    </div>
+  </div>
+  <ul role="list">
+    <li>
+      <h3>The Balance Sheet</h3>
+      <p>
+        The Balance Sheet is a summary of the assets and liabilities and equity
+        of a business at a specific point of time.
+      </p>
+    </li>
+
+    <li>
+      <h3>Income Statement</h3>
+      <p>
+        The Income (Profit and Loss) Statement, commonly referred to as the P&L
+        statement, summarizes the revenue and expenses for a specific time
+        period (one month, one quarter, one year, etc.)
+      </p>
+    </li>
+
+    <li>
+      <h3>Financial Plan</h3>
+      <p>
+        Keep your information current and review the documents on a regular
+        basis (monthly or more often if needed). Review them with key
+        individuals within your company.
+      </p>
+    </li>
+
+    <li>
+      <h3>Financial Ratios</h3>
+      <p>
+        Ratios are useful when comparing your company with the competition on
+        financial performance and also when benchmarking the performance of your
+        company.
+      </p>
+    </li>
+  </ul>
+</section>
+<style>
+  ul::before,
+  ul::after {
+    content: "";
+    flex: 0 0 12%;
+  }
+  .container {
+    padding: 7rem 0 7rem 0;
+    background: var(--color-secondary-1);
+    gap: 4rem;
+    grid-column: full;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    padding-block-end: 1rem;
+    scroll-snap-type: x mandatory;
+    grid-column: full;
+    display: flex;
+    gap: 2.5rem;
+    overflow-x: auto;
+    scroll-padding-inline: var(--content-width, 2rem);
+    max-width: 100%;
+  }
+
+  ul li {
+    width: clamp(400px, 30%, 300px);
+    list-style: none;
+    border-radius: 1.25rem;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    background: #ebebeb;
+    color: #595566;
+    font-size: 1rem;
+    padding: 2.75rem 2.1875rem;
+    align-self: start;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .content {
+    gap: 23rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  button {
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:first-child {
+      background-color: var(--color-primary-3);
+      color: white;
+    }
+
+    &:last-child {
+      background-color: var(--color-primary-1);
+      color: var(--color-primary-3);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 30rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    .buttons {
+      justify-content: center;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>

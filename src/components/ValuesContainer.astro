@@ -1,0 +1,84 @@
+---
+import Card from "./Card.astro";
+import TextTag from "./TextTag.astro";
+---
+
+<section class="container full">
+  <div class="text-container">
+    <div>
+      <TextTag text="Growing with our clients" variant="yellow" />
+    </div>
+    <h2>Our core values & principles</h2>
+    <p>
+      Capitalize on low hanging fruit to identify a ballpark value added
+      activity beta test. Override the digital divide with additional from
+      DevOps.
+    </p>
+  </div>
+  <div class="cards">
+    <Card
+      img="/icons/creative.svg"
+      title="Creative Ideas"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."
+    />
+    <Card
+      img="/icons/feature.svg"
+      title="Best Features"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    />
+    <Card
+      img="/icons/experience.svg"
+      title="Experience"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."
+    />
+    <Card
+      img="/icons/solutions.svg"
+      title="Easy Solutions"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    />
+  </div>
+</section>
+
+<style>
+  .container {
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 6.25rem 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--color-primary-3);
+    justify-items: center;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 14rem;
+    gap: 1rem;
+  }
+
+  .cards {
+    align-items: center;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .content-container {
+    gap: 2rem;
+    justify-content: center;
+    grid-column: content;
+    color: var(--color-secondary-2);
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    color: var(--color-secondary-2);
+  }
+</style>
