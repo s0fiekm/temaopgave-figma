@@ -4,7 +4,7 @@ import TextTag from "./TextTag.astro";
 ---
 
 <section class="container">
-  <div class="text-box">
+  <div class="text">
     <div>
       <TextTag text="Our Team" />
     </div>
@@ -15,7 +15,7 @@ import TextTag from "./TextTag.astro";
       satisfaction, respect for team.
     </p>
   </div>
-  <div class="people flex-row">
+  <div class="people">
     <ImgCard img="../img/Sarah.avif" title="Sarah Jasmine" />
     <ImgCard img="../img/john.avif" title="John Carter" />
     <ImgCard img="../img/daisy.avif" title="Daisy Stella" />
@@ -29,7 +29,14 @@ import TextTag from "./TextTag.astro";
     flex-direction: column;
   }
 
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+
   .people {
+    display: flex;
+    flex-direction: row;
     gap: 1.5rem;
     flex-wrap: wrap;
   }

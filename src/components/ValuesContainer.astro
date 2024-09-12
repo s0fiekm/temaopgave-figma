@@ -4,11 +4,10 @@ import TextTag from "./TextTag.astro";
 ---
 
 <section class="container full">
-  <div class="text-box">
+  <div class="text-container">
     <div>
       <TextTag text="Growing with our clients" variant="yellow" />
     </div>
-
     <h2>Our core values & principles</h2>
     <p>
       Capitalize on low hanging fruit to identify a ballpark value added
@@ -16,7 +15,6 @@ import TextTag from "./TextTag.astro";
       DevOps.
     </p>
   </div>
-
   <div class="cards">
     <Card
       img="/icons/creative.svg"
@@ -54,8 +52,11 @@ import TextTag from "./TextTag.astro";
     justify-items: center;
   }
 
-  .text-box {
+  .text-container {
+    display: flex;
+    flex-direction: column;
     min-width: 14rem;
+    gap: 1rem;
   }
 
   .cards {

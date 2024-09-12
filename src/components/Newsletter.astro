@@ -8,7 +8,7 @@ import Button from "./Button.astro";
     <div class="green-shape"></div>
   </div>
   <div class="newsletter-content">
-    <div class="text-box">
+    <div class="text-section">
       <h2>Subscribe Our Newsletter</h2>
       <p>
         Build stronger Customer Relationships with <span>Consultalk</span>
@@ -42,15 +42,22 @@ import Button from "./Button.astro";
     padding: 2rem;
   }
 
-  .text-box {
+  .text-section {
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h2 {
+      font-size: var(--heading-small);
+    }
 
     p {
       color: #fff;
     }
   }
 
-  .text-box span {
+  .text-section span {
     font-weight: bold;
   }
 

@@ -1,6 +1,6 @@
 <section class="container">
   <div class="content">
-    <div class="text-box">
+    <div class="text">
       <img src="/icons/fp.svg" alt="" />
       <h2>Financial Projections</h2>
       <p>
@@ -10,7 +10,7 @@
         commodo consequat.
       </p>
     </div>
-    <div class="buttons flex-row">
+    <div class="buttons">
       <button><span class="arrow">&#8592;</span></button>
       <button><span class="arrow">&#8594;</span></button>
     </div>
@@ -91,20 +91,17 @@
     align-self: start;
   }
 
-  img {
-    width: 8rem;
-  }
-
-  .text-box {
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
   }
 
   .content {
-    padding-right: clamp(2rem, 20vw, 264px);
-    padding-left: clamp(2rem, 20vw, 264px);
+    gap: 23rem;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 10rem;
   }
 
   button {
@@ -146,7 +143,7 @@
       box-sizing: border-box;
     }
 
-    .text-box {
+    .text {
       text-align: center;
     }
 

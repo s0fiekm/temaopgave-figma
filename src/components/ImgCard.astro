@@ -9,8 +9,8 @@ const { img, title } = Astro.props;
       <div class="card-image">
         <img src={img} alt="" />
       </div>
-      <div class="text-box">
-        <h5>{title}</h5>
+      <div class="card-content">
+        <h3>{title}</h3>
         <p>
           Leverage agile frameworks to provide a robust synopsis for high-level
           overviews.
@@ -36,8 +36,12 @@ const { img, title } = Astro.props;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
     text-align: center;
+    flex: 1 1 300px;
     max-width: 350px;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -47,10 +51,16 @@ const { img, title } = Astro.props;
     border-radius: 1.25rem;
   }
 
+  .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .social-icons {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: center;
-    align-items: center;
   }
 </style>

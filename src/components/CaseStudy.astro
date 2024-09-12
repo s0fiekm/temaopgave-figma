@@ -4,7 +4,7 @@ import CaseStudyImg from "./CaseStudyImg.astro";
 
 <CaseStudyImg />
 <div class="container">
-  <div class="text-box">
+  <div class="text-container">
     <h2>Project Overview</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -32,7 +32,7 @@ import CaseStudyImg from "./CaseStudyImg.astro";
       </li>
     </ul>
   </div>
-  <div class="text-box">
+  <div class="text-container">
     <h3>Storyboard</h3>
     <p>
       Completely synergize resource taxing relationships via premier niche
@@ -51,7 +51,7 @@ import CaseStudyImg from "./CaseStudyImg.astro";
     </p>
   </div>
   <img src="/img/girls-with-computer.avif" alt="" />
-  <div class="text-box">
+  <div class="text-container">
     <h3>Project result</h3>
     <p>
       Leverage agile frameworks to provide a robust synopsis for high level
@@ -75,6 +75,9 @@ import CaseStudyImg from "./CaseStudyImg.astro";
     display: grid;
     gap: 1rem;
   }
+  .text-container {
+    display: flex;
+    flex-direction: column;
 
     &:nth-of-type(1) {
       gap: 2.5rem;

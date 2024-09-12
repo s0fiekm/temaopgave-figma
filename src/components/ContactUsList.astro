@@ -5,7 +5,7 @@ const { icon, title, info } = Astro.props;
 <ul class="grid-container">
   <li class="card">
     <img src={icon} alt="Icon" class="card-icon" />
-    <div class="text-box">
+    <div class="text">
       <p class="card-title">{title}</p>
       <p class="card-info">{info}</p>
     </div>
@@ -13,6 +13,12 @@ const { icon, title, info } = Astro.props;
 </ul>
 
 <style>
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .card {
     display: flex;
 

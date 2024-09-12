@@ -86,7 +86,6 @@ font-size: var(--heading-base);
 }
 
 p{
-  line-height: 1.5;
 font-family: var(--font-family-secondary);
 font-size: var(--paragraph);
 color: var(--color-secondary-3);
@@ -98,26 +97,7 @@ font-family: var(--font-family-secondary);
 font-size: var(--paragraph);
 }
 
-.flex-container {
-  display: flex;
-}
 
-.text-box {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-
-}
   
 }
 
@@ -132,11 +112,4 @@ font-size: var(--paragraph);
 
 
 }
-
-
-
-
-
-
-
 
