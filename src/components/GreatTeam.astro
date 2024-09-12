@@ -3,39 +3,41 @@ import Button from "./Button.astro";
 import ImgCard from "./ImgCard.astro";
 ---
 
-<div class="container">
-  <div class="content-container">
-    <div class="text">
-      <h2>Meet Our Great Team</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. enim ad minim
-        veniam, quis nostrud exercitation.
-      </p>
-    </div>
-    <Button text="Join Our Team" variant="black" />
+<div class="text-container">
+  <div class="text">
+    <h2>Meet Our Great Team</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam,
+      quis nostrud exercitation.
+    </p>
   </div>
-  <div class="img-container">
-    <ImgCard title="Sarah Jasmine" img="img/Sarah.avif" />
-    <ImgCard title="John Carter" img="img/john.avif" />
-    <ImgCard title="Daisy Stella" img="img/daisy.avif" />
-    <ImgCard title="Maya Elisabeth" img="img/maya.avif" />
-    <ImgCard title="Ryan Jackson" img="img/ryan.avif" />
-    <ImgCard title="Lilly Victoria" img="img/lilly.avif" />
+  <div>
+    <Button text="join our team" variant="black" />
   </div>
 </div>
+<section class="img-container">
+  <ImgCard title="Sarah Jasmine" img="img/Sarah.avif" />
+  <ImgCard title="John Carter" img="img/john.avif" />
+  <ImgCard title="Daisy Stella" img="img/daisy.avif" />
+  <ImgCard title="Maya Elisabeth" img="img/maya.avif" />
+  <ImgCard title="Ryan Jackson" img="img/ryan.avif" />
+  <ImgCard title="Lilly Victoria" img="img/lilly.avif" />
+</section>
 
 <style>
-  .container {
+  .text-container {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 25rem;
   }
+
   .img-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3.1rem;
-    justify-content: space-between;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .content-container {
@@ -43,5 +45,14 @@ import ImgCard from "./ImgCard.astro";
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
+  }
+
+  @media (max-width: 700px) {
+    .img-container {
+      display: grid;
+      gap: 3rem;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>

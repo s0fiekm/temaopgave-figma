@@ -10,7 +10,7 @@ const { img, title } = Astro.props;
         <img src={img} alt="" />
       </div>
       <div class="card-content">
-        <h3>{title}</h3>
+        <h5>{title}</h5>
         <p>
           Leverage agile frameworks to provide a robust synopsis for high-level
           overviews.
@@ -36,12 +36,7 @@ const { img, title } = Astro.props;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    overflow: hidden;
-    align-items: center;
     text-align: center;
-    flex: 1 1 300px;
-    max-width: 350px;
-    width: 100%;
     box-sizing: border-box;
   }
 
@@ -60,7 +55,8 @@ const { img, title } = Astro.props;
 
   .social-icons {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
+    align-items: center;
   }
 </style>
